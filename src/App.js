@@ -11,7 +11,7 @@ export default function App() {
   
 <Navbar/>
 <ItemListContainer/>
-<ItemCount stock={10} initial={1}/>
+<ItemCount stock={10} initial={0}/>
 </div>
   )
 }
