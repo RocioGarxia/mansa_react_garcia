@@ -1,4 +1,4 @@
-export default function ItemDetail ({numSerie = "", tecnica ="", artista =""}) {
+export default function ItemDetail ({title = "", description ="", price =""}) {
 
 return (
 <div className="item">
