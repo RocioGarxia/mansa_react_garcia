@@ -15,7 +15,7 @@ const Item= ({image, title, children}) => {
 
 const Container = styled.div`
 box-shadow: 0px 0px 20px -8px rgba (0,0,0.27);
-border-radius: 8pxM
+border-radius: 8px;
 width: 100%;
 max-width: 250px;
 overflow: hidden;
