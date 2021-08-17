@@ -6,24 +6,24 @@ const ItemListContainer = () => {
     useEffect(() => {
         const arr = [
             {
-                numSerie: 1456,
-                tecnica: "Óleo",
-                artista: "Julieta Oro",
+                title: "Naugrafio",
+                description: "Óleo",
+                price: 1500,
             },
             {
-                numSerie: 1457,
-                tecnica: "Óleo",
-                artista: "Pabla Perez",
+                title: "Pabla Perez's dream",
+                description: "Acrílico",
+                price: 2400,
             },
             {
-                numSerie: 1458,
-                tecnica: "Óleo",
-                artista: "Xord Criste",
+                title: "Xord Criste",
+                description: "Collage",
+                price: 3800,
             },
             {
-                numSerie: 1459,
-                tecnica: "Mixed media",
-                artista: "Juan Jorge",
+                title: "Juan Jorge en el campo",
+                description: "Mixed media",
+                price: 600,
             }
         ]
         const task = new Promise((resolve, reject) => {
