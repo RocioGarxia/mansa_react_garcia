@@ -1,7 +1,36 @@
 import { useEffect, useState } from "react";
-import ItemList from './ItemList'
+/*import ItemList from './ItemList';*/
+import ItemDetail from "./ItemDetail";
 
-const ItemListContainer = () => {
+const getItems = () => {
+return fetch ("https://api.mercadolibre.com/sites/MLA/search?q=arte")
+.then(response => {
+return response.json ()
+})
+}
+
+export default function ItemListContainer () {
+
+const [itemList, setItemList] = useState([])
+
+useEffect (async () => {
+    const data = await getItems ()
+    const arr = []
+    data.results.forEach (item => {
+        arr.push(<ItemDetail key={item.id} title={item.title} description={item.id} price={item.price}></ItemDetail>)
+    })
+
+    setItemList(arr)
+}, [])
+
+return (
+<>
+{itemList}
+</>
+)
+}
+
+/*const ItemListContainer = () => {
     const [items, setItems] = useState([])
     useEffect(() => {
         const arr = [
@@ -33,7 +62,7 @@ const ItemListContainer = () => {
         })
         task.then(value => setItems(value))
     }, [items])
-    return <ItemList arts={items} />
+    return ( <ItemList arts={items} /> )
 }
 
-export default ItemListContainer;
+export default ItemListContainer; */

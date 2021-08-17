@@ -3,14 +3,14 @@ import {useState} from "react";
 export default function ItemCount ( {stock, initial, onAdd = () => {} }) {
     const [contador, setContador] = useState (initial);
     const [error, setError] = useState ("");
-    const [addedToCarrito, setAddedToCarrito] = useState (false);
+/*    const [addedToCarrito, setAddedToCarrito] = useState (false);
 
  const handleOnAddCarrito = (event) => {
     if (contador > 0) {
         setAddedToCarrito (true)
         onAdd (event) 
     }
- }
+ } */
 
 const addItem = (num) => {
         if (stock >= contador + num && 0 <= contador + num) {
@@ -36,7 +36,7 @@ setError ("Fuishhh! Este producto se fue volando! Pronto repondremos el stock");
                 <button onClick={() => addItem(-1)}>-</button>
                 <div>Estás llevando la siguiente cantidad de productos: {contador} </div>
                 <button onClick={() => addItem(1)}>+</button>
-                <button onClick={handleOnAddCarrito}> Agregar al carrito </button>
+                <button onClick={() => onAdd(contador)}> Agregar al Carrito </button>
                
 </div>
 
