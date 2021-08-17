@@ -8,7 +8,7 @@ return response.json ()
 })
 }
 
-export default function ItemListContainer () {
+export default function ItemDetailContainer () {
 
 const [itemList, setItemList] = useState([])
 

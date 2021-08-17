@@ -6,8 +6,8 @@ const ItemList = ({arts}) => {
     <div> {
       arts ? arts.map((art) => {
         return (
-          <Item key={art.numSerie} title={art.artista}>
-            {art.tecnica}
+          <Item key={art.title} title={art.description}>
+            {art.price}
           </Item>
         );
       })
