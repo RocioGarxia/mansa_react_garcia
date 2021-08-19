@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-const Item= ({image, title, children}) => {
+const Item= ({image, title, price, id}) => {
     return (
 <Container>
     <img src={image} alt={title}/>
 
     <Info>
         <div>{title}</div>
-        <p>{children}</p>
+        <p>{price}</p>
+        <p>{id}</p>
     </Info>
 </Container> );
 };
